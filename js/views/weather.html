@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12  text-center">
+      <div class="col-xs-12 weather-days today" ng-repeat="day in data.list | filter:!dt.today">
+        <h1 class="temp-title" style="display:block;">
+          {{ day.temp.day}}&deg;
+        </h1>
+        <hr>
+        <img src="img/clock.png" width="48" alt="Location" />
+        <h2>{{ currentTime }} {{ day.dt.day  }}</h2>
+        <h3 class="title">{{data.city.name}}, {{data.city.country}}</h3>
+        </div>
+        <h4 class="hidden">{{data.city.coord.lat | number:4 }}, {{data.city.coord.lon | number:4 }}</h4>
+    </div>
+  </div>
+</div>
